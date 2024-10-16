@@ -7,4 +7,6 @@ public interface IInteractable
     /// Interact with the object
     /// </summary>
     public void Interact();
+
+    public void Disable();
 }

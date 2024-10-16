@@ -18,8 +18,14 @@ public class WorldButton : MonoBehaviour, IInteractable
         {
             PopupController.Instance.Show(portfolioData);
         }
+    }
 
-        Debug.Log("Interacted with WorldButton");
+    public void Disable()
+    {
+        if (buttonType == ButtonType.PortfolioData)
+        {
+            PopupController.Instance.Hide();
+        }
     }
 }
 
