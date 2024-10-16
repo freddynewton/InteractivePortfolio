@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b34fd1f7d303344d8d42438d53dc1e5, type: 3}
+  m_Name: PortfolioData I used to
+  m_EditorClassIdentifier: 
+  Image: {fileID: 21300000, guid: 1746b8d006ed55441a7a209bb5e935ff, type: 3}
+  Title: I used to | <i>Jan, 2021</i>
+  Description: Is a game that emerged from the Global Game Jam 2021 - Stuttgart with
+    the theme "Lost and Found" in less than 72 hours.
+  Website: https://freddynewton.itch.io/i-used-to

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b34fd1f7d303344d8d42438d53dc1e5, type: 3}
+  m_Name: PortfolioData Bachelorthesis
+  m_EditorClassIdentifier: 
+  Image: {fileID: 21300000, guid: 4d2a74b7d7b938d409506cf1790cb2ee, type: 3}
+  Title: Bachelor Thesis | <i>Oct, 2021</i>
+  Description: An in-depth study on Tactical Game AI with Shared Knowledge based
+    on Influence Maps
+  Website: https://github.com/freddynewton/BachelorarbeitLatex/blob/main/Latex/template_Article.pdf

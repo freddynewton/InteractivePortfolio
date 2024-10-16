@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b34fd1f7d303344d8d42438d53dc1e5, type: 3}
+  m_Name: PortfolioData Bone Vault
+  m_EditorClassIdentifier: 
+  Image: {fileID: 21300000, guid: b98c175812e10db4795f6a39d71eac21, type: 3}
+  Title: Bone Vault | <i>Jan, 2021</i>
+  Description: "An athmospheric 3D pixel art Roguelike game with FPS melee fighting
+    and with a lot of Bones \U0001F480!"
+  Website: https://freddynewton.itch.io/bone-vault
