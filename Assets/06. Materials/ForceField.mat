@@ -56,7 +56,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _FresnelPower: 5
-    - _Offset: -1.54
+    - _Offset: 0.43
     - _PlayerDistanceThreshold: 0.513
     - _QueueControl: 0
     - _QueueOffset: 0
