@@ -16,18 +16,13 @@ public class TransitionManager : MonoBehaviour
     /// <param name="duration">The duration, in seconds, over which the transition is shown.</param>
     public async Task ShowTransition(float duration = 2)
     {
-        // Initialize transition progress at the beginning of the show transition
-        transitionAnimator.progress = 0;
+        transitionAnimator.profile.invert = false;
+        transitionAnimator.Play();
 
-        // Gradually increase progress until it reaches 1
         while (transitionAnimator.progress < 1)
         {
-            transitionAnimator.progress += Time.deltaTime / duration;
             await Task.Yield();  // Yield to allow other operations between frames
         }
-
-        // Ensure progress reaches 1 at the end of the transition
-        transitionAnimator.progress = 1;
     }
 
     /// <summary>
@@ -38,17 +33,14 @@ public class TransitionManager : MonoBehaviour
     public async Task HideTransition(float duration = 2)
     {
         // Initialize transition progress at the beginning of the hide transition
-        transitionAnimator.progress = 1;
+        transitionAnimator.profile.invert = true;
 
-        // Gradually decrease progress until it reaches 0
-        while (transitionAnimator.progress > 0)
+        transitionAnimator.Play();
+
+        while (transitionAnimator.progress < 1)
         {
-            transitionAnimator.progress -= Time.deltaTime / duration;
             await Task.Yield();  // Yield to allow other operations between frames
         }
-
-        // Ensure progress reaches 0 at the end of the transition
-        transitionAnimator.progress = 0;
     }
 
     /// <summary>

@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class PopupController : Singleton<PopupController>
 {
@@ -36,14 +37,18 @@ public class PopupController : Singleton<PopupController>
         });
 
         // Use DoTween to animate the popup
-        LeanTween.alphaCanvas(_canvasGroup, 1, 0.5f).setEase(LeanTweenType.easeOutCubic);
-        _canvasGroup.blocksRaycasts = true;
+        _canvasGroup.DOFade(1, 0.5f).SetEase(Ease.OutCubic).OnStart(() =>
+        {
+            _canvasGroup.blocksRaycasts = true;
+        });
     }
 
     public void Hide()
     {
         // Use DoTween to animate the popup
-        LeanTween.alphaCanvas(_canvasGroup, 0, 0.5f).setEase(LeanTweenType.easeOutCubic);
-        _canvasGroup.blocksRaycasts = false;
+        _canvasGroup.DOFade(0, 0.5f).SetEase(Ease.OutCubic).OnComplete(() =>
+        {
+            _canvasGroup.blocksRaycasts = false;
+        });
     }
 }
