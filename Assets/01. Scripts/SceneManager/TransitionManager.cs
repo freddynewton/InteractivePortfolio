@@ -50,4 +50,9 @@ public class TransitionManager : MonoBehaviour
     {
         transitionAnimator ??= GetComponent<TransitionAnimator>();
     }
+
+    private void OnApplicationQuit()
+    {
+        transitionAnimator.profile.invert = false;
+    }
 }

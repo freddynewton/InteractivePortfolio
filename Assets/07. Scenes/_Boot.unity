@@ -493,7 +493,7 @@ MonoBehaviour:
   soundContainers:
   - {fileID: 11400000, guid: e1c949f75f349a34785067700d67e8c0, type: 2}
   - {fileID: 11400000, guid: 4063ea93d38b65e42a29029afb09997e, type: 2}
---- !u!28 &593196199
+--- !u!28 &950947672
 Texture2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -621,7 +621,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _GradientTex:
-        m_Texture: {fileID: 593196199}
+        m_Texture: {fileID: 950947672}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
