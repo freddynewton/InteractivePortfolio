@@ -1,10 +1,8 @@
 using System.Collections;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
-/// <summary>
-/// Animator for images to show gifs.
-/// </summary>
 public class ImageSpriteSheetAnimator : MonoBehaviour
 {
     [Header("Sprite Animation Settings")]
@@ -14,12 +12,10 @@ public class ImageSpriteSheetAnimator : MonoBehaviour
     [Tooltip("Time in seconds between frames.")]
     [SerializeField] private float frameRate = 0.1f;
 
-    [Tooltip("Should the animation loop indefinitely?")]
     private bool loop = true;
-
     private int currentFrame;
     private Coroutine animationCoroutine;
-
+    private Sprite[] animationFrames;
 
     /// <summary>
     /// Starts the sprite sheet animation with looping behavior.
@@ -30,11 +26,14 @@ public class ImageSpriteSheetAnimator : MonoBehaviour
     {
         if (animationFrames.Length > 0)
         {
+            this.animationFrames = animationFrames;
+
             // Stop any ongoing animation before starting a new one
             if (animationCoroutine != null)
             {
                 StopCoroutine(animationCoroutine);
             }
+
             animationCoroutine = StartCoroutine(PlayAnimation(animationFrames, loop));
         }
     }
@@ -52,14 +51,6 @@ public class ImageSpriteSheetAnimator : MonoBehaviour
     }
 
     /// <summary>
-    /// Stops the looped animation and prevents further looping.
-    /// </summary>
-    public void StopLoop()
-    {
-        loop = false;
-    }
-
-    /// <summary>
     /// Sets the first frame of the animation (without playing it).
     /// </summary>
     public void SetFirstFrame(Sprite[] animationFrames)
@@ -70,7 +61,7 @@ public class ImageSpriteSheetAnimator : MonoBehaviour
             return;
         }
 
-        targetImage.sprite = animationFrames[0];
+        targetImage.sprite = animationFrames.First();
     }
 
     /// <summary>
@@ -81,7 +72,7 @@ public class ImageSpriteSheetAnimator : MonoBehaviour
         if (animationFrames.Length > 0)
         {
             StopAnimation(); // Stop any ongoing animation
-            StartCoroutine(PlayOneShot(animationFrames));
+            animationCoroutine = StartCoroutine(PlayOneShot(animationFrames));
         }
     }
 
@@ -90,9 +81,9 @@ public class ImageSpriteSheetAnimator : MonoBehaviour
     /// </summary>
     private IEnumerator PlayOneShot(Sprite[] animationFrames)
     {
-        for (int i = 0; i < animationFrames.Length; i++)
+        foreach (var frame in animationFrames)
         {
-            targetImage.sprite = animationFrames[i];
+            targetImage.sprite = frame;
             yield return new WaitForSeconds(frameRate);
         }
     }
@@ -125,24 +116,24 @@ public class ImageSpriteSheetAnimator : MonoBehaviour
         if (animationCoroutine != null)
         {
             StopCoroutine(animationCoroutine); // Stop the current animation
-            StartCoroutine(PlayAnimation(targetImage.sprite ? new Sprite[1] : new Sprite[0])); // Restart with the new loop setting
+            animationCoroutine = StartCoroutine(PlayOneShot(animationFrames)); // Play the first frame
         }
     }
 
     /// <summary>
     /// Plays the sprite sheet animation, looping if 'loop' is true.
     /// </summary>
-    private IEnumerator PlayAnimation(Sprite[] animationFrames, bool loop = false)
+    private IEnumerator PlayAnimation(Sprite[] animationFrames, bool loop)
     {
         this.loop = loop;
 
         while (this.loop)
         {
             // Cycle through the frames
-            for (int i = 0; i < animationFrames.Length; i++)
+            foreach (var frame in animationFrames)
             {
-                targetImage.sprite = animationFrames[i];
-                yield return new WaitForSeconds(frameRate);
+                targetImage.sprite = frame;
+                yield return new WaitForSeconds(frameRate); // Wait for the next frame
             }
         }
     }

@@ -66,7 +66,7 @@ public class MainMenuCanvasController : Singleton<MainMenuCanvasController>
 
         ShowTitle();
         ShowName(fadeTextDuration);
-        yield return new WaitForSecondsRealtime(fadeTextDuration * 3);
+        yield return new WaitForSecondsRealtime(fadeTextDuration * 2);
 
         ShowMenuButtons();
     }
@@ -156,7 +156,7 @@ public class MainMenuCanvasController : Singleton<MainMenuCanvasController>
         {
             RectTransform button = buttons[i];
             button.localScale = Vector3.zero;
-            button.DOScale(1, 1).SetEase(Ease.OutBack).SetDelay(i * 0.15f);
+            button.DOScale(1, 1).SetEase(Ease.OutBack).SetDelay(i * 0.1f);
             button.GetComponent<MainMenuSelectionButton>()?.StartFadeInAnimation(i * 0.15f);
         }
     }

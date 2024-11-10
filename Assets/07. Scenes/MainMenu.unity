@@ -3042,7 +3042,7 @@ PrefabInstance:
     - target: {fileID: 3368288253143887780, guid: 1553d73546b0f2441a49eccabb489b07, type: 3}
       propertyPath: 'loadInAnimation.Array.data[40]'
       value: 
-      objectReference: {fileID: -1737226771, guid: 9513e7212ea27df41b140c4e7b8a2bfe, type: 3}
+      objectReference: {fileID: -1339408852, guid: 9513e7212ea27df41b140c4e7b8a2bfe, type: 3}
     - target: {fileID: 3368288253143887780, guid: 1553d73546b0f2441a49eccabb489b07, type: 3}
       propertyPath: 'hoverSpritesSprites.Array.data[0]'
       value: 

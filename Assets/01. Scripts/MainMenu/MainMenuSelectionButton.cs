@@ -76,7 +76,7 @@ public class MainMenuSelectionButton : MonoBehaviour, IPointerEnterHandler, IPoi
         panelCanvasGroup.DOFade(0, fadeDuration).SetEase(Ease.OutCubic);
 
         // Stop the icon hover animation
-        iconAnimator?.StopLoop();
+        iconAnimator?.SetLoop(false);
     }
 
     /// <summary>
