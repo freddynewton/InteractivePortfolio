@@ -18,5 +18,8 @@ EditorBuildSettings:
     path: Assets/07. Scenes/InteractiveXrScene.unity
     guid: 7fc86887b74c04142abddae7ef0c1d5f
   m_configObjects:
+    WebXR.Settings: {fileID: 11400000, guid: 93ecba894e783dd4fb6e64f8b76f6b87, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 88a4ccde56c23ad4385d883a79155056, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: eae418a6efb0f5641b9efea6a042d0e8, type: 2}
   m_UseUCBPForAssetBundles: 0
