@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using DG.Tweening;
 using System.Collections;
+using UnityEngine.Events;
+using System;
 
 /// <summary>
 /// Handles hover, click, and fade effects for main menu selection buttons,
@@ -15,6 +17,12 @@ public class MainMenuSelectionButton : MonoBehaviour, IPointerEnterHandler, IPoi
 
     [Tooltip("Duration of the fade animation in seconds.")]
     [SerializeField] private float fadeDuration = 0.5f;
+
+    [Header("On Click Settings")]
+    [SerializeField]
+    private bool useCustomAction = false;
+
+    [SerializeField] private UnityEvent customAction; // Changed to UnityEvent to make it visible in the Inspector
 
     [Header("Scene Settings")]
     [Tooltip("The scene to load when the button is clicked.")]
@@ -87,6 +95,13 @@ public class MainMenuSelectionButton : MonoBehaviour, IPointerEnterHandler, IPoi
     {
         // Play click sound
         SoundManager.Instance.PlaySound(SoundType.UiClick);
+
+        // Execute the custom action if enabled
+        if (useCustomAction)
+        {
+            customAction?.Invoke();
+            return;
+        }
 
         // If blockOnClick is true, exit without loading the scene
         if (blockOnClick)
