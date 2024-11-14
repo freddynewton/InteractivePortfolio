@@ -76,7 +76,7 @@ public class ChapterButton : MonoBehaviour, IPointerClickHandler, IPointerEnterH
         SoundManager.Instance.PlaySound(SoundType.UiClick);
 
         // Scroll the portfolio to the target chapter associated with this button.
-        _readablePortfolioCanvasController.ScrollViewController.ScrollToChild(_scrollViewTarget);
+        _readablePortfolioCanvasController.ScrollViewController.SnapTo(_scrollViewTarget);
     }
 
     /// <summary>

@@ -263,7 +263,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8158e07a9ffff9e4e9d3eb51d30f0f2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scrollView: {fileID: 21416351648056797}
+  _scrollRect: {fileID: 21416351648056797}
+  _contentPanel: {fileID: 9123869813108090641}
   _scrollVerticalLayoutGroup: {fileID: 6018775523398806323}
 --- !u!1 &880702889491095314
 GameObject:
