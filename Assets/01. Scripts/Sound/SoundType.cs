@@ -6,4 +6,10 @@ public enum SoundType
     UiClick,
 
     UiWhoosh,
+
+    Yippie,
+
+    Paper,
+
+    GearWheel,
 }

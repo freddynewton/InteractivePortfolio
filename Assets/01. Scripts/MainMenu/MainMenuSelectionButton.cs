@@ -44,6 +44,9 @@ public class MainMenuSelectionButton : MonoBehaviour, IPointerEnterHandler, IPoi
     [SerializeField] private Sprite[] hoverSpritesSprites;
     [SerializeField] private Sprite[] loadInAnimation;
 
+    [Header("Sound Settings")]
+    [SerializeField] private SoundType _clickSound;
+
     /// <summary>
     /// Starts the fade-in animation for the button icon.
     /// </summary>
@@ -94,7 +97,7 @@ public class MainMenuSelectionButton : MonoBehaviour, IPointerEnterHandler, IPoi
     public void OnPointerClick(PointerEventData eventData)
     {
         // Play click sound
-        SoundManager.Instance.PlaySound(SoundType.UiClick);
+        SoundManager.Instance.PlaySound(_clickSound);
 
         // Execute the custom action if enabled
         if (useCustomAction)
