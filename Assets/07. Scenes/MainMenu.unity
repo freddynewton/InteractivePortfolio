@@ -278,6 +278,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainMenu Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2298230688927045472, guid: 46ef706c9adf97c43bbe0d61aac13856, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2298230688927045472, guid: 46ef706c9adf97c43bbe0d61aac13856, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3023777075887623052, guid: 46ef706c9adf97c43bbe0d61aac13856, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -430,9 +438,25 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8745767614681167701, guid: 46ef706c9adf97c43bbe0d61aac13856, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8745767614681167701, guid: 46ef706c9adf97c43bbe0d61aac13856, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8745767614681167701, guid: 46ef706c9adf97c43bbe0d61aac13856, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8918480594226206090, guid: 46ef706c9adf97c43bbe0d61aac13856, type: 3}
       propertyPath: m_Value
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9123869813108090641, guid: 46ef706c9adf97c43bbe0d61aac13856, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
