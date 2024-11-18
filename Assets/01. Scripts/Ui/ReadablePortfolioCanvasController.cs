@@ -42,7 +42,7 @@ public class ReadablePortfolioCanvasController : MonoBehaviour
         {
             if (chapterButton != exception)
             {
-                chapterButton.SetFocus(false);
+                chapterButton.SetBackgroundFocused(false);
             }
         });
     }

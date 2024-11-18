@@ -238,4 +238,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adbc9ca072440d249bed3e4c5a6f879c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _canvasGroup: {fileID: 6020879188249595401}
+  panelCanvasGroup: {fileID: 6020879188249595401}
+  fadeDuration: 0.3
+  defaultAlpha: 0
+  isBackgroundFocused: 0
+  _scrollViewTarget: {fileID: 0}
