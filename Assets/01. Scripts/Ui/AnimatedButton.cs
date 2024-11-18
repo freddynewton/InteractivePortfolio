@@ -16,16 +16,20 @@ public abstract class AnimatedButton : MonoBehaviour, IPointerEnterHandler, IPoi
 
     [SerializeField] protected bool isBackgroundFocused = false;
 
+    [Header("Sound Settings")]
+    [SerializeField] protected SoundType clickSound = SoundType.UiClick;
+    [SerializeField] protected SoundType hoverSound = SoundType.UiWhoosh;
+
     public virtual void OnPointerClick(PointerEventData eventData)
     {
         // Play click sound
-        SoundManager.Instance.PlaySound(SoundType.UiClick);
+        SoundManager.Instance.PlaySound(clickSound);
     }
 
     public virtual void OnPointerEnter(PointerEventData eventData)
     {
         // Play hover sound
-        SoundManager.Instance.PlaySound(SoundType.UiWhoosh);
+        SoundManager.Instance.PlaySound(hoverSound);
 
         if (isBackgroundFocused)
         {

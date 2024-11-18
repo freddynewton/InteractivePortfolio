@@ -265,6 +265,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panelCanvasGroup: {fileID: 472137756}
   fadeDuration: 0.5
+  defaultAlpha: 0
+  isBackgroundFocused: 0
+  clickSound: 0
+  hoverSound: 1
   useCustomAction: 0
   customAction:
     m_PersistentCalls:
@@ -276,7 +280,6 @@ MonoBehaviour:
   iconAnimator: {fileID: 0}
   hoverSpritesSprites: []
   loadInAnimation: []
-  _clickSound: 0
 --- !u!1 &864364477
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,6 +319,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 185038303115968310, guid: 46ef706c9adf97c43bbe0d61aac13856, type: 3}
+      propertyPath: clickSound
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 185038303115968310, guid: 46ef706c9adf97c43bbe0d61aac13856, type: 3}
       propertyPath: _clickSound
       value: 4
@@ -605,6 +612,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5582324838007732388, guid: 46ef706c9adf97c43bbe0d61aac13856, type: 3}
+      propertyPath: clickSound
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5582324838007732388, guid: 46ef706c9adf97c43bbe0d61aac13856, type: 3}
       propertyPath: _clickSound
       value: 2
       objectReference: {fileID: 0}
@@ -623,6 +634,10 @@ PrefabInstance:
     - target: {fileID: 5932523621805819277, guid: 46ef706c9adf97c43bbe0d61aac13856, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7016205227194942100, guid: 46ef706c9adf97c43bbe0d61aac13856, type: 3}
+      propertyPath: clickSound
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7016205227194942100, guid: 46ef706c9adf97c43bbe0d61aac13856, type: 3}
       propertyPath: _clickSound
